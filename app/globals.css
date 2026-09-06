@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   HỆ MÀU & KIỂU CHỮ CỦA MR.69
+   Muốn đổi tông màu toàn bộ website, chỉ cần sửa các giá trị trong khối
+   @theme này — mọi trang sẽ tự đổi theo.
+   ========================================================================= */
+@theme {
+  /* ---------------------------------------------------------------------
+     BẢNG MÀU CHỦ ĐẠO CỦA QUÁN (6 mã bạn gửi)
+     --------------------------------------------------------------------- */
+  --color-cream: #f6f2e7;       /* kem sáng   — nền chính toàn website */
+  --color-cream-deep: #e6e2d6;  /* kem xám    — nền các khối xen kẽ */
+  --color-ink: #2e2e2e;         /* đen mềm    — màu chữ chính */
+  --color-sage: #afc69d;        /* xanh sage  — chữ & viền trên nền tối */
+  --color-accent: #8b6e3d;      /* nâu đồng   — giá tiền, link, chữ nhãn */
+  --color-gold: #d4c08a;        /* vàng nhạt  — nhãn & viền trên nền tối */
+
+  /* ---------------------------------------------------------------------
+     BỐN MÀU SUY RA TỪ BẢNG TRÊN
+     Bảng màu gốc không có màu đủ tối để đặt chữ trắng lên (xanh sage
+     #afc69d quá nhạt, chữ trắng đặt lên sẽ không đọc được). Bốn màu dưới
+     đây được pha từ chính bảng trên để giải quyết việc đó.
+     --------------------------------------------------------------------- */
+  --color-forest: #374a32;      /* xanh đậm  — nền header, footer, khối tối */
+  --color-brand: #55704a;       /* xanh vừa  — nút bấm, tên nhóm món */
+  --color-brand-dark: #3f5738;  /* xanh đậm hơn khi rê chuột lên nút */
+  --color-brand-light: #6b8a5e; /* xanh nhạt hơn khi rê chuột */
+  --color-ink-soft: #5f5c55;    /* xám chữ   — đoạn văn, mô tả */
+  --color-shade: #1a231a;       /* CHỈ để phủ lên ảnh cho chữ dễ đọc */
+
+  /* ---------------------------------------------------------------------
+     BO GÓC — đổi một dòng là mọi ảnh và thẻ trên web bo theo
+     --------------------------------------------------------------------- */
+  --radius-card: 1.25rem;       /* 20px — ảnh, thẻ, khung */
+  --radius-soft: 0.875rem;      /* 14px — ảnh nhỏ, ô nhập liệu */
+
+  --font-display: var(--font-phudu), Georgia, serif;
+  --font-body: var(--font-be-vietnam), system-ui, sans-serif;
+}
+
+/* ------------------------------------------------------------------ nền */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dải ảnh bìa trượt ngang.
+   Đường cong chuyển động được chọn để ảnh bắt đầu chậm, lướt nhanh ở giữa rồi
+   dừng nhẹ — nhìn êm mắt, không bị giật ở đầu và cuối.
+   Muốn trượt nhanh hơn thì giảm số 900ms. */
+.hero-track {
+  transition: transform 900ms cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+
+/* Dùng trong đúng một khoảnh khắc khi dải ảnh nhảy thầm từ bản sao về ảnh thật
+   ở đầu kia. Tắt hiệu ứng để cú nhảy diễn ra tức thì, mắt không thấy. */
+.hero-track--instant {
+  transition: none;
+}
+
+/* Vệt tối mềm ngay phía sau chữ trên ảnh bìa. Nhờ nó mà chữ vẫn đọc rõ
+   kể cả khi chủ quán tải lên một tấm ảnh rất sáng. Muốn nhạt bớt thì giảm
+   con số 0.72 xuống. */
+.hero-scrim {
+  background: radial-gradient(
+    64% 58% at 50% 50%,
+    rgb(26 35 26 / 0.72) 0%,
+    rgb(26 35 26 / 0.34) 58%,
+    transparent 100%
+  );
+}
+
+/* Vân giấy mờ để nền kem bớt phẳng — rất nhẹ, không ảnh hưởng tốc độ. */
+.paper-grain {
+  background-image: radial-gradient(
+    var(--color-ink) 0.5px,
+    transparent 0.5px
+  );
+  background-size: 22px 22px;
+  opacity: 0.045;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Tiêu đề mục: chữ nhỏ, giãn cách rộng, có gạch ngang hai bên */
+@utility eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------- hiệu ứng */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Tôn trọng cài đặt "giảm chuyển động" của người dùng. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    animation: none;
+  }
+  /* Máy nào bật "giảm chuyển động" thì ảnh bìa đổi ngay, không trượt. */
+  .hero-track {
+    transition: none;
+  }
+}
+
+/* Thanh cuộn ngang cho dải chọn nhóm món trên điện thoại */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Giữ tỉ lệ khung ảnh khi ảnh chưa tải xong, tránh giật layout */
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

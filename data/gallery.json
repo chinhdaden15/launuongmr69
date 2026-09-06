@@ -1,0 +1,11 @@
+[
+  { "id": "g1", "image": "/uploads/gal-1.jpg", "caption": { "vi": "Khu bàn gỗ tầng trệt", "en": "Ground-floor wooden tables" }, "album": "khong-gian", "order": 1 },
+  { "id": "g2", "image": "/uploads/gal-2.jpg", "caption": { "vi": "Bàn nướng than hồng", "en": "Charcoal grill table" }, "album": "khong-gian", "order": 2 },
+  { "id": "g3", "image": "/uploads/gal-3.jpg", "caption": { "vi": "Góc sân ngoài trời", "en": "Outdoor courtyard" }, "album": "khong-gian", "order": 3 },
+  { "id": "g4", "image": "/uploads/gal-4.jpg", "caption": { "vi": "Phòng riêng cho nhóm đông", "en": "Private room for groups" }, "album": "khong-gian", "order": 4 },
+  { "id": "g5", "image": "/uploads/gal-5.jpg", "caption": { "vi": "Lẩu song vị nghi ngút", "en": "Twin-broth hotpot" }, "album": "mon-an", "order": 5 },
+  { "id": "g6", "image": "/uploads/gal-6.jpg", "caption": { "vi": "Ba chỉ bò trên vỉ", "en": "Beef on the grill" }, "album": "mon-an", "order": 6 },
+  { "id": "g7", "image": "/uploads/gal-7.jpg", "caption": { "vi": "Sườn nướng mật ong", "en": "Honey-glazed ribs" }, "album": "mon-an", "order": 7 },
+  { "id": "g8", "image": "/uploads/gal-8.jpg", "caption": { "vi": "Tiệc sinh nhật tại quán", "en": "A birthday at Mr.69" }, "album": "su-kien", "order": 8 },
+  { "id": "g9", "image": "/uploads/gal-9.jpg", "caption": { "vi": "Đêm nhạc acoustic cuối tuần", "en": "Weekend acoustic night" }, "album": "su-kien", "order": 9 }
+]

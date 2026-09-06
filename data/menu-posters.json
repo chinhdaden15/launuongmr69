@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mp-combo-1",
+    "categoryId": "cat-khai-vi",
+    "image": "/uploads/menu-combo-1.jpg",
+    "caption": {
+      "vi": "Trang combo & set — phần 1",
+      "en": "Combo menu — page 1"
+    },
+    "order": 1
+  },
+  {
+    "id": "mp-combo-2",
+    "categoryId": "cat-khai-vi",
+    "image": "/uploads/menu-combo-2.jpg",
+    "caption": {
+      "vi": "Trang combo & set — phần 2",
+      "en": "Combo menu — page 2"
+    },
+    "order": 2
+  },
+  {
+    "id": "mp-lau-1",
+    "categoryId": "cat-lau",
+    "image": "/uploads/menu-lau-1.jpg",
+    "caption": {
+      "vi": "Trang menu lẩu — phần 1",
+      "en": "Hotpot menu — page 1"
+    },
+    "order": 3
+  },
+  {
+    "id": "mp-lau-2",
+    "categoryId": "cat-lau",
+    "image": "/uploads/menu-lau-2.jpg",
+    "caption": {
+      "vi": "Trang menu lẩu — phần 2",
+      "en": "Hotpot menu — page 2"
+    },
+    "order": 4
+  },
+  {
+    "id": "mp-nuong-1",
+    "categoryId": "cat-nuong",
+    "image": "/uploads/menu-nuong-1.jpg",
+    "caption": {
+      "vi": "Trang menu nướng — phần 1",
+      "en": "Grill menu — page 1"
+    },
+    "order": 5
+  },
+  {
+    "id": "mp-nuong-2",
+    "categoryId": "cat-nuong",
+    "image": "/uploads/menu-nuong-2.jpg",
+    "caption": {
+      "vi": "Trang menu nướng — phần 2",
+      "en": "Grill menu — page 2"
+    },
+    "order": 6
+  },
+  {
+    "id": "mp-nhau-1",
+    "categoryId": "cat-nhau",
+    "image": "/uploads/menu-nhau-1.jpg",
+    "caption": {
+      "vi": "Trang món nhâm nhi — phần 1",
+      "en": "Bar snacks menu — page 1"
+    },
+    "order": 7
+  },
+  {
+    "id": "mp-nhau-2",
+    "categoryId": "cat-nhau",
+    "image": "/uploads/menu-nhau-2.jpg",
+    "caption": {
+      "vi": "Trang món nhâm nhi — phần 2",
+      "en": "Bar snacks menu — page 2"
+    },
+    "order": 8
+  },
+  {
+    "id": "mp-them-1",
+    "categoryId": "cat-them",
+    "image": "/uploads/menu-them-1.jpg",
+    "caption": {
+      "vi": "Trang món thêm — phần 1",
+      "en": "Sides menu — page 1"
+    },
+    "order": 9
+  },
+  {
+    "id": "mp-them-2",
+    "categoryId": "cat-them",
+    "image": "/uploads/menu-them-2.jpg",
+    "caption": {
+      "vi": "Trang món thêm — phần 2",
+      "en": "Sides menu — page 2"
+    },
+    "order": 10
+  },
+  {
+    "id": "mp-uong-1",
+    "categoryId": "cat-uong",
+    "image": "/uploads/menu-uong-1.jpg",
+    "caption": {
+      "vi": "Trang đồ uống — phần 1",
+      "en": "Drinks menu — page 1"
+    },
+    "order": 11
+  },
+  {
+    "id": "mp-uong-2",
+    "categoryId": "cat-uong",
+    "image": "/uploads/menu-uong-2.jpg",
+    "caption": {
+      "vi": "Trang đồ uống — phần 2",
+      "en": "Drinks menu — page 2"
+    },
+    "order": 12
+  }
+]

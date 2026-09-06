@@ -1,0 +1,73 @@
+import "server-only";
+import crypto from "node:crypto";
+import { cookies } from "next/headers";
+
+/**
+ * Đăng nhập admin đơn giản, không cần dịch vụ ngoài.
+ * Mật khẩu đặt trong file .env.local (ADMIN_PASSWORD).
+ * Phiên đăng nhập lưu trong cookie đã ký HMAC nên không giả mạo được.
+ */
+
+const COOKIE = "mr69_admin";
+const MAX_AGE = 60 * 60 * 12; // 12 tiếng
+
+function secret() {
+  return process.env.AUTH_SECRET || "mr69-doi-secret-nay-truoc-khi-len-that";
+}
+
+function sign(payload: string) {
+  return crypto.createHmac("sha256", secret()).update(payload).digest("hex");
+}
+
+export function createToken() {
+  const payload = String(Date.now() + MAX_AGE * 1000);
+  return `${payload}.${sign(payload)}`;
+}
+
+export function verifyToken(token: string | undefined): boolean {
+  if (!token) return false;
+  const [payload, mac] = token.split(".");
+  if (!payload || !mac) return false;
+  const expected = sign(payload);
+  // So sánh theo thời gian cố định để tránh dò mật khẩu qua độ trễ.
+  const a = Buffer.from(mac);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) return false;
+  return Number(payload) > Date.now();
+}
+
+export function checkPassword(input: string): boolean {
+  const expected = process.env.ADMIN_PASSWORD || "mr69";
+  const a = Buffer.from(input);
+  const b = Buffer.from(expected);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+
+export async function isLoggedIn(): Promise<boolean> {
+  const jar = await cookies();
+  return verifyToken(jar.get(COOKIE)?.value);
+}
+
+export async function login() {
+  const jar = await cookies();
+  jar.set(COOKIE, createToken(), {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+    maxAge: MAX_AGE,
+  });
+}
+
+export async function logout() {
+  const jar = await cookies();
+  jar.delete(COOKIE);
+}
+
+export const ADMIN_COOKIE = COOKIE;
+
+/** Dùng ở đầu mỗi trang admin: chưa đăng nhập thì đá về trang đăng nhập. */
+export async function requireAdmin() {
+  const { redirect } = await import("next/navigation");
+  if (!(await isLoggedIn())) redirect("/admin/login");
+}

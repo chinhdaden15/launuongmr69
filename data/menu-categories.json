@@ -1,0 +1,86 @@
+[
+  {
+    "id": "cat-khai-vi",
+    "slug": "khai-vi",
+    "name": {
+      "vi": "Khai vị",
+      "en": "Appetisers"
+    },
+    "desc": {
+      "vi": "Món mở đầu bữa ăn — nhẹ nhàng, kích thích vị giác trước khi vào lẩu và nướng.",
+      "en": "Light plates to open the meal and wake up the appetite."
+    },
+    "image": "/uploads/cat-combo.jpg",
+    "order": 1
+  },
+  {
+    "id": "cat-lau",
+    "slug": "lau",
+    "name": {
+      "vi": "Lẩu",
+      "en": "Hotpot"
+    },
+    "desc": {
+      "vi": "Nước dùng ninh từ xương mỗi sáng, nóng ấm và đậm vị — thứ không thể thiếu trong mỗi buổi quây quần.",
+      "en": "Broth simmered from bone each morning — warm, rich, and essential to every gathering."
+    },
+    "image": "/uploads/cat-lau.jpg",
+    "order": 2
+  },
+  {
+    "id": "cat-nuong",
+    "slug": "nuong",
+    "name": {
+      "vi": "Nướng",
+      "en": "Grill"
+    },
+    "desc": {
+      "vi": "Tự tay trở từng miếng thịt trên than hồng, thưởng thức đúng lúc còn nóng và thơm nhất.",
+      "en": "Turn each cut over the coals yourself and eat it at its hottest, most fragrant moment."
+    },
+    "image": "/uploads/cat-nuong.jpg",
+    "order": 3
+  },
+  {
+    "id": "cat-nhau",
+    "slug": "an-vat",
+    "name": {
+      "vi": "Ăn vặt",
+      "en": "Snacks"
+    },
+    "desc": {
+      "vi": "Món gọi thêm cho vui miệng. Vị ngon nhân đôi khi dùng kèm bia lạnh.",
+      "en": "Something extra to pick at. Twice as good with a cold beer."
+    },
+    "image": "/uploads/cat-nhau.jpg",
+    "order": 4
+  },
+  {
+    "id": "cat-them",
+    "slug": "mon-them",
+    "name": {
+      "vi": "Món thêm",
+      "en": "Sides"
+    },
+    "desc": {
+      "vi": "Rau, nấm, mì và những phần gọi thêm để nồi lẩu lúc nào cũng đầy.",
+      "en": "Greens, mushrooms, noodles — everything that keeps the pot full."
+    },
+    "image": "/uploads/cat-them.jpg",
+    "order": 5
+  },
+  {
+    "id": "cat-uong",
+    "slug": "giai-khat",
+    "name": {
+      "vi": "Giải khát",
+      "en": "Drinks"
+    },
+    "desc": {
+      "vi": "Bia lạnh, trà trái cây thanh mát và nước ép giải ngấy giữa bữa nướng.",
+      "en": "Cold beer, fruit teas and juices to cut through the richness."
+    },
+    "image": "/uploads/cat-uong.jpg",
+    "order": 6
+  }
+]

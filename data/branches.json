@@ -1,0 +1,61 @@
+[
+  {
+    "id": "br-1",
+    "name": {
+      "vi": "Mr.69 Cơ sở 1",
+      "en": "Mr.69 – Branch 1"
+    },
+    "address": {
+      "vi": "13 đường số 17, Phường Phước Long, Thủ Đức - TP.HCM",
+      "en": "123 ABC Street, XYZ Ward, Ho Chi Minh City"
+    },
+    "phone": "0325200052",
+    "hours": [
+      {
+        "label": {
+          "vi": "Hằng ngày",
+          "en": "Daily"
+        },
+        "time": "08:00 – 24:00"
+      },
+      {
+        "label": {
+          "vi": "Nhận khách cuối",
+          "en": "Last order"
+        },
+        "time": "23:00"
+      }
+    ],
+    "mapEmbed": "",
+    "mapLink": "https://maps.app.goo.gl/7H867kfvGEfXL5JG8",
+    "image": "/uploads/branch-1.jpg",
+    "status": "open",
+    "order": 1
+  },
+  {
+    "id": "br-2",
+    "name": {
+      "vi": "Mr.69 Cơ sở 2",
+      "en": "Mr.69 – Branch 2"
+    },
+    "address": {
+      "vi": "Đang cập nhật địa chỉ",
+      "en": "Address coming soon"
+    },
+    "phone": "0900 000 069",
+    "hours": [
+      {
+        "label": {
+          "vi": "Dự kiến",
+          "en": "Expected"
+        },
+        "time": "16:00 – 24:00"
+      }
+    ],
+    "mapEmbed": "",
+    "mapLink": "",
+    "image": "/uploads/branch-2.jpg",
+    "status": "coming-soon",
+    "order": 2
+  }
+]

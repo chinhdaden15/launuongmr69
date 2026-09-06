@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Về Mr.69",
+    "menu": "Thực đơn",
+    "gallery": "Không gian",
+    "promotions": "Ưu đãi & Combo",
+    "branches": "Chi nhánh",
+    "booking": "Đặt bàn",
+    "contact": "Liên hệ"
+  },
+  "cta": {
+    "bookNow": "Đặt bàn ngay",
+    "viewMore": "Xem thêm",
+    "viewAll": "Xem tất cả",
+    "viewMenu": "Xem thực đơn",
+    "call": "Gọi ngay",
+    "directions": "Chỉ đường",
+    "back": "Quay lại"
+  },
+  "home": {
+    "menuTitle": "Thực đơn",
+    "menuLead": "Lẩu sôi, than hồng và những phần thịt được ướp theo công thức riêng của Mr.69.",
+    "promoTitle": "Ưu đãi & Sự kiện",
+    "promoLead": "Những ưu đãi đang chạy tại Mr.69 — ghé quán và nhận phần quà đang chờ bạn.",
+    "galleryTitle": "Không gian quán",
+    "galleryLead": "Nơi bạn bè tụ họp bên nồi lẩu nghi ngút và vỉ nướng đỏ lửa.",
+    "branchTitle": "Hệ thống chi nhánh",
+    "branchLead": "Tìm cơ sở Mr.69 gần bạn nhất."
+  },
+  "menu": {
+    "title": "Thực đơn",
+    "lead": "Toàn bộ món lẩu, nướng và đồ uống tại Mr.69.",
+    "all": "Menu",
+    "empty": "Nhóm món này đang được cập nhật.",
+    "soldOut": "Tạm hết"
+  },
+  "gallery": {
+    "title": "Không gian",
+    "lead": "Hình ảnh thực tế tại Mr.69.",
+    "albums": {
+      "khong-gian": "Không gian",
+      "mon-an": "Món ăn",
+      "su-kien": "Sự kiện"
+    }
+  },
+  "promotions": {
+    "title": "Ưu đãi & Combo",
+    "lead": "Combo lẩu nướng và chương trình khuyến mãi đang áp dụng.",
+    "empty": "Hiện chưa có chương trình nào đang chạy.",
+    "validUntil": "Áp dụng đến"
+  },
+  "branches": {
+    "title": "Chi nhánh",
+    "lead": "Hệ thống cơ sở Mr.69.",
+    "comingSoon": "Sắp khai trương",
+    "open": "Đang hoạt động",
+    "hours": "Giờ mở cửa",
+    "address": "Địa chỉ"
+  },
+  "booking": {
+    "title": "Đặt bàn trực tuyến",
+    "lead": "Giữ bàn trước để không phải chờ, đặc biệt vào cuối tuần.",
+    "name": "Họ và tên",
+    "phone": "Số điện thoại",
+    "email": "Email (không bắt buộc)",
+    "branch": "Chọn chi nhánh",
+    "date": "Ngày đến",
+    "time": "Giờ đến",
+    "guests": "Số người",
+    "note": "Ghi chú",
+    "notePlaceholder": "Ví dụ: cần bàn ngoài trời, có trẻ nhỏ, sinh nhật...",
+    "submit": "Gửi yêu cầu đặt bàn",
+    "sending": "Đang gửi...",
+    "successTitle": "Đã nhận yêu cầu đặt bàn!",
+    "successBody": "Mr.69 sẽ gọi lại xác nhận trong ít phút. Cảm ơn bạn.",
+    "errorRequired": "Vui lòng điền họ tên, số điện thoại và ngày đến.",
+    "errorPhone": "Số điện thoại chưa đúng định dạng.",
+    "errorGeneric": "Gửi không thành công. Bạn vui lòng gọi trực tiếp hotline giúp mình nhé.",
+    "orCall": "Hoặc gọi trực tiếp"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "lead": "Mr.69 luôn sẵn sàng lắng nghe bạn.",
+    "hotline": "Hotline",
+    "email": "Email",
+    "social": "Mạng xã hội"
+  },
+  "footer": {
+    "explore": "Khám phá",
+    "branches": "Chi nhánh",
+    "contact": "Liên hệ",
+    "rights": "Bản quyền thuộc về Mr.69.",
+    "hotline": "Tổng đài"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "notFound": "Không tìm thấy nội dung",
+    "notFoundBody": "Trang bạn tìm không tồn tại hoặc đã được chuyển đi."
+  }
+}

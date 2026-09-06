@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Mr.69",
+    "menu": "Menu",
+    "gallery": "Our Space",
+    "promotions": "Offers & Combos",
+    "branches": "Locations",
+    "booking": "Reservations",
+    "contact": "Contact"
+  },
+  "cta": {
+    "bookNow": "Book a table",
+    "viewMore": "Read more",
+    "viewAll": "View all",
+    "viewMenu": "View menu",
+    "call": "Call now",
+    "directions": "Get directions",
+    "back": "Back"
+  },
+  "home": {
+    "menuTitle": "Our Menu",
+    "menuLead": "Simmering hotpot, glowing charcoal and cuts marinated to Mr.69's own recipe.",
+    "promoTitle": "Offers & Events",
+    "promoLead": "What's running at Mr.69 right now — drop by and claim yours.",
+    "galleryTitle": "Our Space",
+    "galleryLead": "Where friends gather around a steaming pot and a red-hot grill.",
+    "branchTitle": "Our Locations",
+    "branchLead": "Find the Mr.69 closest to you."
+  },
+  "menu": {
+    "title": "Menu",
+    "lead": "Every hotpot, grill and drink served at Mr.69.",
+    "all": "Menu",
+    "empty": "This section is being updated.",
+    "soldOut": "Sold out"
+  },
+  "gallery": {
+    "title": "Our Space",
+    "lead": "Real photos from Mr.69.",
+    "albums": {
+      "khong-gian": "Interior",
+      "mon-an": "Food",
+      "su-kien": "Events"
+    }
+  },
+  "promotions": {
+    "title": "Offers & Combos",
+    "lead": "Hotpot and grill combos plus current promotions.",
+    "empty": "No promotions are running at the moment.",
+    "validUntil": "Valid until"
+  },
+  "branches": {
+    "title": "Locations",
+    "lead": "The Mr.69 network.",
+    "comingSoon": "Opening soon",
+    "open": "Now open",
+    "hours": "Opening hours",
+    "address": "Address"
+  },
+  "booking": {
+    "title": "Book a table",
+    "lead": "Reserve ahead so you never have to wait — especially on weekends.",
+    "name": "Full name",
+    "phone": "Phone number",
+    "email": "Email (optional)",
+    "branch": "Choose a location",
+    "date": "Date",
+    "time": "Time",
+    "guests": "Guests",
+    "note": "Notes",
+    "notePlaceholder": "e.g. outdoor table, coming with kids, birthday...",
+    "submit": "Send reservation request",
+    "sending": "Sending...",
+    "successTitle": "Reservation received!",
+    "successBody": "Mr.69 will call you shortly to confirm. Thank you.",
+    "errorRequired": "Please fill in your name, phone number and date.",
+    "errorPhone": "That phone number doesn't look right.",
+    "errorGeneric": "Could not send. Please call our hotline instead.",
+    "orCall": "Or call us directly"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Mr.69 is always happy to hear from you.",
+    "hotline": "Hotline",
+    "email": "Email",
+    "social": "Social"
+  },
+  "footer": {
+    "explore": "Explore",
+    "branches": "Locations",
+    "contact": "Contact",
+    "rights": "All rights reserved by Mr.69.",
+    "hotline": "Hotline"
+  },
+  "common": {
+    "loading": "Loading...",
+    "notFound": "Page not found",
+    "notFoundBody": "This page doesn't exist or has been moved."
+  }
+}

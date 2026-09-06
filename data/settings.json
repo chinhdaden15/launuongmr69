@@ -1,0 +1,98 @@
+{
+  "brandName": "Mr.69",
+  "logo": "/uploads/avt-lau-b5b87b7c.jpg",
+  "tagline": {
+    "vi": "Lẩu & Nướng",
+    "en": "Hotpot & Grill"
+  },
+  "hotline": "0325200052",
+  "email": "lienhe@launuongmr69.com",
+  "zalo": "0325200052",
+  "facebook": "https://facebook.com/launuongmr69",
+  "messenger": "https://m.me/launuongmr69",
+  "tiktok": "https://www.tiktok.com/@launuongmr69",
+  "notifyEmail": "lienhe@launuongmr69.com",
+  "hero": [
+    {
+      "id": "hero-1",
+      "image": "/uploads/hero-1.jpg",
+      "eyebrow": {
+        "vi": "Lẩu & Nướng Mr.69",
+        "en": "Mr.69 Hotpot & Grill"
+      },
+      "title": {
+        "vi": "Than hồng đỏ lửa,\nlẩu sôi nghi ngút",
+        "en": "Glowing charcoal,\nbubbling hotpot"
+      },
+      "subtitle": {
+        "vi": "Nơi bạn bè quây quần bên vỉ nướng và nồi lẩu, giữa không gian mộc mạc thân quen.",
+        "en": "Where friends gather around the grill and the pot, in a warm rustic room."
+      },
+      "ctaLabel": {
+        "vi": "Xem thực đơn",
+        "en": "View the menu"
+      },
+      "ctaHref": "/thuc-don",
+      "order": 1
+    },
+    {
+      "id": "hero-2",
+      "image": "/uploads/hero-2.jpg",
+      "eyebrow": {
+        "vi": "Ưu đãi đang chạy",
+        "en": "Running now"
+      },
+      "title": {
+        "vi": "Set lẩu song vị\nchỉ 359.000đ",
+        "en": "Twin-broth hotpot set\nfrom 359,000đ"
+      },
+      "subtitle": {
+        "vi": "Áp dụng cho nhóm 2–4 người, từ thứ Hai đến thứ Năm hằng tuần.",
+        "en": "For groups of 2–4, Monday through Thursday."
+      },
+      "ctaLabel": {
+        "vi": "Đặt bàn ngay",
+        "en": "Book a table"
+      },
+      "ctaHref": "/dat-ban",
+      "order": 2
+    },
+    {
+      "id": "hero-3",
+      "image": "/uploads/hero-3.jpg",
+      "eyebrow": {
+        "vi": "Không gian",
+        "en": "Our space"
+      },
+      "title": {
+        "vi": "Mộc mạc,\nấm cúng, thân quen",
+        "en": "Rustic,\nwarm, familiar"
+      },
+      "subtitle": {
+        "vi": "Bàn ghế gỗ, đèn vàng và mùi than thơm — đúng chất quán nướng Việt.",
+        "en": "Wooden tables, warm lights and the scent of charcoal."
+      },
+      "ctaLabel": {
+        "vi": "Xem không gian",
+        "en": "See the space"
+      },
+      "ctaHref": "/khong-gian",
+      "order": 3
+    }
+  ],
+  "about": {
+    "image": "/uploads/about.jpg",
+    "title": {
+      "vi": "Trải nghiệm lẩu nướng đúng chất Việt",
+      "en": "A truly Vietnamese grill experience"
+    },
+    "body": {
+      "vi": "Mr.69 chọn cách làm mộc: bàn gỗ, lò than thật, thịt ướp theo công thức riêng và nước lẩu ninh từ xương mỗi sáng. Không cầu kỳ, không phô trương — chỉ có món ngon nóng hổi, bia lạnh và những người bạn ngồi lại với nhau lâu hơn dự định.\n\nMỗi phần thịt tại Mr.69 đều được tuyển chọn trong ngày, ướp tối thiểu 6 tiếng để thấm đều gia vị trước khi lên vỉ. Nồi lẩu được nêm vừa miệng người Việt — đậm đà nhưng không gắt, càng nấu càng ngọt.",
+      "en": "Mr.69 keeps it honest: wooden tables, real charcoal, meat marinated to our own recipe and broth simmered from bone every morning. Nothing fussy — just hot food, cold beer, and friends who end up staying longer than they planned.\n\nEvery cut is selected fresh daily and marinated for at least six hours before it hits the grill. The broth is seasoned for Vietnamese palates — rich but never harsh, and it only gets sweeter as the night goes on."
+    }
+  },
+  "bookingNote": {
+    "vi": "Yêu cầu đặt bàn sẽ được xác nhận qua điện thoại trong vòng 15 phút. Với nhóm trên 15 người, bạn vui lòng gọi trực tiếp hotline.",
+    "en": "Your request will be confirmed by phone within 15 minutes. For groups over 15, please call our hotline directly."
+  }
+}

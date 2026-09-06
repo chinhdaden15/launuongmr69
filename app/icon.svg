@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#374A32"/>
+  <text x="32" y="28" text-anchor="middle" dominant-baseline="middle"
+        font-family="Georgia, serif" font-size="19" font-weight="700" fill="#F6F2E7">Mr.</text>
+  <text x="32" y="47" text-anchor="middle" dominant-baseline="middle"
+        font-family="Georgia, serif" font-size="21" font-weight="700" fill="#D4C08A">69</text>
+</svg>
