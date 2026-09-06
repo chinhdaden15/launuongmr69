@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { isLoggedIn } from "@/lib/auth";
 import { CHI_XEM } from "@/lib/env";
+import { NutDeploy } from "@/components/admin/NutDeploy";
 import { logoutAction } from "./actions";
 
 export const metadata = { title: "Quản trị Mr.69" };
@@ -61,6 +62,10 @@ export default async function AdminLayout({
               </Link>
             ))}
           </nav>
+
+          {/* Nút tạm để đẩy nội dung lên Vercel — chỉ hiện khi chạy trên máy.
+              Bỏ đi khi đã chuyển dữ liệu sang Supabase. */}
+          {!CHI_XEM ? <NutDeploy /> : null}
 
           <div className="hidden border-t border-stone-200 px-3 py-4 lg:block">
             <Link

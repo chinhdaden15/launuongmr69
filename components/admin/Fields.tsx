@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { FieldDef } from "@/lib/admin-config";
 import { ImagePicker } from "./ImagePicker";
 
@@ -10,6 +11,42 @@ const inputCls =
   "w-full rounded border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700";
 const labelCls = "mb-1.5 block text-xs font-semibold text-stone-700";
 const hintCls = "mt-1 text-[11px] leading-relaxed text-stone-500";
+
+/**
+ * Ô nhập số.
+ *
+ * Không dùng thẳng `value={Number(...)}` được: khi chủ quán bôi đen số 0 rồi
+ * bấm xoá, ô trở thành rỗng, `Number("")` ra 0 nên số 0 lập tức nhảy lại vào ô
+ * — gõ số mới không được. Ở đây giữ nguyên đúng những gì đang gõ (kể cả ô
+ * trống), chỉ quy ra số khi báo ngược lên trên.
+ *
+ * Ô trống được hiểu là 0, khớp với quy ước "để 0 nghĩa là theo thời giá".
+ */
+function ONhapSo({
+  value,
+  onChange,
+}: {
+  value: number;
+  onChange: (v: number) => void;
+}) {
+  const [dangGo, setDangGo] = useState(value ? String(value) : "");
+
+  return (
+    <input
+      type="number"
+      inputMode="numeric"
+      value={dangGo}
+      placeholder="0"
+      onChange={(e) => {
+        const v = e.target.value;
+        setDangGo(v);
+        onChange(v === "" ? 0 : Number(v));
+      }}
+      onFocus={(e) => e.currentTarget.select()}
+      className={`${inputCls} max-w-[200px]`}
+    />
+  );
+}
 
 /** Ô nhập song ngữ: hai khung Việt / Anh nằm cạnh nhau. */
 function Bilingual({
@@ -157,14 +194,7 @@ export function Field({
           />
         );
       case "number":
-        return (
-          <input
-            type="number"
-            value={Number(value ?? 0)}
-            onChange={(e) => set(Number(e.target.value))}
-            className={`${inputCls} max-w-[200px]`}
-          />
-        );
+        return <ONhapSo value={Number(value ?? 0)} onChange={set} />;
       case "date":
         return (
           <input

@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { checkPassword, isLoggedIn, login, logout } from "@/lib/auth";
 import { CHI_XEM, LOI_CHI_XEM } from "@/lib/env";
+import { dayLenMang } from "@/lib/deploy";
 import {
   getBookings,
   saveBookings,
@@ -100,4 +101,20 @@ export async function deleteBookingAction(id: string) {
   await saveBookings(all.filter((b) => b.id !== id));
   revalidatePath("/admin/dat-ban");
   return { ok: true as const };
+}
+
+// ------------------------------------------------------- đưa lên mạng
+/**
+ * Đẩy nội dung vừa sửa lên GitHub, Vercel sẽ tự dựng lại website.
+ * Chỉ dùng được khi chạy trên máy — bản trên mạng không có git.
+ */
+export async function deployAction() {
+  await requireAuth();
+  if (CHI_XEM) {
+    return {
+      ok: false,
+      loi: "Nút này chỉ bấm được khi mở trang quản trị trên máy của bạn.",
+    };
+  }
+  return dayLenMang();
 }

@@ -50,6 +50,13 @@ export function CollectionEditor({
     setRows((prev) => [...prev, row]);
     setOpenId(id);
     setDirty(true);
+    setMessage(null);
+    // Đợi mục mới được vẽ ra rồi cuộn tới, khỏi phải tự đi tìm.
+    setTimeout(() => {
+      document
+        .getElementById(`muc-${id}`)
+        ?.scrollIntoView({ block: "center", behavior: "smooth" });
+    }, 60);
   }
 
   function removeRow(id: string) {
@@ -136,6 +143,7 @@ export function CollectionEditor({
           return (
             <li
               key={row.id}
+              id={`muc-${row.id}`}
               className={`overflow-hidden rounded border bg-white ${open ? "border-emerald-600 shadow-sm" : "border-stone-200"}`}
             >
               <div className="flex items-center gap-2 px-3 py-2.5">
@@ -219,6 +227,19 @@ export function CollectionEditor({
           );
         })}
       </ul>
+
+      {/* Nút thêm ngay cuối danh sách — khỏi phải cuộn ngược lên đầu trang.
+          Nút ở đầu trang vẫn giữ cho ai quen bấm ở trên. */}
+      {rows.length > 0 ? (
+        <button
+          type="button"
+          onClick={addRow}
+          className="mt-3 flex w-full items-center justify-center gap-2 rounded border-2 border-dashed border-stone-300 py-4 text-sm font-medium text-stone-600 transition-colors hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-800"
+        >
+          <span className="text-lg leading-none">+</span>
+          Thêm {config.title.split(" (")[0].toLowerCase()} mới
+        </button>
+      ) : null}
 
       {rows.length === 0 ? (
         <p className="rounded border border-dashed border-stone-300 py-14 text-center text-sm text-stone-500">

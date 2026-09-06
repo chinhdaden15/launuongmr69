@@ -58,7 +58,7 @@ export const MENU_ITEMS: CollectionConfig = {
     { key: "name", label: "Tên món", type: "bilingual" },
     { key: "categoryId", label: "Thuộc nhóm", type: "category" },
     { key: "desc", label: "Mô tả", type: "bilingual-textarea", rows: 3 },
-    { key: "price", label: "Giá (VNĐ)", type: "number", hint: "Nhập số, ví dụ 189000. Để 0 nghĩa là 'theo thời giá'." },
+    { key: "price", label: "Giá (VNĐ)", type: "number", hint: "Nhập số, ví dụ 189000. Để trống nghĩa là 'theo thời giá'." },
     { key: "unit", label: "Đơn vị", type: "bilingual", hint: "Ví dụ: / phần 200g" },
     { key: "image", label: "Ảnh món", type: "image", hint: "Ảnh ngang, khoảng 800×600" },
     { key: "featured", label: "Món nổi bật (hiện ở trang chủ)", type: "checkbox" },
