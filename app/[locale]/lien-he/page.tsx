@@ -30,7 +30,8 @@ export default async function ContactPage({
       <PageHeader
         title={dict.contact.title}
         lead={dict.contact.lead}
-        image="/uploads/hero-3.jpg"
+        // Lấy ảnh bìa cuối — đổi trong Admin → Cài đặt chung → Ảnh bìa
+        image={settings.hero.at(-1)?.image}
       />
 
       <section className="relative overflow-hidden bg-cream py-16 lg:py-24">

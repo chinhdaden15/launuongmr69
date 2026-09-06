@@ -27,7 +27,8 @@ export default async function GalleryPage({
       <PageHeader
         title={dict.gallery.title}
         lead={dict.gallery.lead}
-        image="/uploads/gal-1.jpg"
+        // Lấy tấm đầu trong thư viện ảnh — đổi trong Admin → Thư viện ảnh
+        image={photos.find((p) => p.image)?.image}
       />
 
       <section className="relative overflow-hidden bg-cream py-16 lg:py-24">

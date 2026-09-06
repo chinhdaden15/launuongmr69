@@ -25,7 +25,8 @@ export default async function PromotionsPage({
       <PageHeader
         title={dict.promotions.title}
         lead={dict.promotions.lead}
-        image="/uploads/promo-1.jpg"
+        // Lấy ảnh chương trình đầu tiên — đổi trong Admin → Ưu đãi & Combo
+        image={promotions.find((p) => p.image)?.image}
       />
 
       <section className="relative overflow-hidden bg-cream py-16 lg:py-24">

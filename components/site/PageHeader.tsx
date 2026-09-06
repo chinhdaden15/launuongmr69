@@ -13,11 +13,17 @@ export function PageHeader({
   eyebrow?: string;
   title: string;
   lead?: string;
-  image: string;
+  image?: string;
 }) {
   return (
     <section className="relative flex h-[46vh] min-h-[340px] items-center justify-center overflow-hidden lg:h-[54vh]">
-      <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
+      {/* Ảnh có thể trống nếu chủ quán chưa up tấm nào cho mục tương ứng —
+          khi đó chỉ hiện nền xanh đậm, vẫn đẹp chứ không vỡ hình. */}
+      {image ? (
+        <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
+      ) : (
+        <div className="absolute inset-0 bg-forest" />
+      )}
       <div className="absolute inset-0 bg-shade/78" />
       <div className="hero-scrim pointer-events-none absolute inset-0" aria-hidden />
       <div className="relative z-10 mx-auto max-w-2xl px-5 pt-16 text-center">

@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { Container } from "@/components/site/Container";
 import { MenuBrowser } from "@/components/site/MenuBrowser";
 import { getDictionary, isLocale, t } from "@/lib/i18n";
-import { getCategories, getMenuPosters } from "@/lib/store";
+import { getCategories, getMenuPosters, getSettings } from "@/lib/store";
 
 export const metadata: Metadata = { title: "Thực đơn" };
 
@@ -29,7 +29,8 @@ export default async function MenuPage({
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
 
-  const [categories, posters] = await Promise.all([
+  const [settings, categories, posters] = await Promise.all([
+    getSettings(),
     getCategories(),
     getMenuPosters(),
   ]);
@@ -44,7 +45,8 @@ export default async function MenuPage({
       <PageHeader
         title={dict.menu.title}
         lead={dict.menu.lead}
-        image="/uploads/cat-nuong.jpg"
+        // Lấy ảnh nhóm món đầu tiên — đổi trong Admin → Thực đơn → Nhóm món
+        image={categories.find((c) => c.image)?.image}
       />
 
       <MenuBrowser
@@ -63,13 +65,16 @@ export default async function MenuPage({
       <section className="bg-cream pb-20 lg:pb-28">
         <Container>
           <div className="relative aspect-[21/9] overflow-hidden rounded-card sm:aspect-[21/7]">
-            <Image
-              src="/uploads/hero-1.jpg"
-              alt=""
-              fill
-              sizes="(max-width: 1240px) 100vw, 1240px"
-              className="object-cover"
-            />
+            {/* Ảnh bìa trang chủ — đổi trong Admin → Cài đặt chung */}
+            {settings.hero[0]?.image ? (
+              <Image
+                src={settings.hero[0].image}
+                alt=""
+                fill
+                sizes="(max-width: 1240px) 100vw, 1240px"
+                className="object-cover"
+              />
+            ) : null}
             <div className="absolute inset-0 bg-shade/65" />
             <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
               <p className="font-display text-2xl text-cream sm:text-3xl lg:text-4xl">

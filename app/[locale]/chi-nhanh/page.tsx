@@ -26,7 +26,8 @@ export default async function BranchesPage({
       <PageHeader
         title={dict.branches.title}
         lead={dict.branches.lead}
-        image="/uploads/branch-1.jpg"
+        // Lấy ảnh mặt tiền của cơ sở đầu tiên có ảnh — đổi trong Admin → Chi nhánh
+        image={branches.find((b) => b.image)?.image}
       />
 
       <BranchSection

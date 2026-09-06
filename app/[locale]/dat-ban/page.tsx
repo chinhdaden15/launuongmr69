@@ -24,7 +24,8 @@ export default async function BookingPage({
       <PageHeader
         title={dict.booking.title}
         lead={dict.booking.lead}
-        image="/uploads/hero-2.jpg"
+        // Lấy ảnh bìa thứ hai — đổi trong Admin → Cài đặt chung → Ảnh bìa
+        image={settings.hero[1]?.image ?? settings.hero[0]?.image}
       />
 
       <section className="relative overflow-hidden bg-cream py-16 lg:py-24">
