@@ -17,12 +17,15 @@ export function ImagePicker({
 }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  /** Báo đã nén được bao nhiêu, ví dụ "Đã nén 4.2MB → 310KB". */
+  const [daNen, setDaNen] = useState("");
   const [dragging, setDragging] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   async function upload(file: File) {
     setBusy(true);
     setError("");
+    setDaNen("");
     try {
       const form = new FormData();
       form.append("file", file);
@@ -30,6 +33,14 @@ export function ImagePicker({
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Tải lên thất bại");
       onChange(data.url);
+
+      // Cho chủ quán thấy ảnh đã được nén nhẹ đi bao nhiêu.
+      const { cuKb, moiKb } = data as { cuKb?: number; moiKb?: number };
+      if (cuKb && moiKb && cuKb > moiKb * 1.1) {
+        const g = (kb: number) =>
+          kb >= 1024 ? `${(kb / 1024).toFixed(1)}MB` : `${kb}KB`;
+        setDaNen(`Đã nén nhẹ ảnh: ${g(cuKb)} → ${g(moiKb)} cho web tải nhanh.`);
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Tải lên thất bại");
     } finally {
@@ -100,9 +111,11 @@ export function ImagePicker({
             className="mt-2 w-full rounded border border-stone-200 px-2 py-1 font-mono text-[11px] text-stone-600"
           />
 
-          <p className="mt-1 text-[11px] text-stone-500">
+          <p className="mt-1 text-[11px] leading-relaxed text-stone-500">
             {error ? (
               <span className="text-red-600">{error}</span>
+            ) : daNen ? (
+              <span className="text-green-700">{daNen}</span>
             ) : (
               hint || "Kéo thả file vào đây, hoặc bấm Chọn file. Tối đa 25MB."
             )}

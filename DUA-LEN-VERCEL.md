@@ -62,17 +62,34 @@ openssl rand -base64 48
 Xong Vercel cho bạn một đường dẫn dạng `launuongmr69.vercel.app` — gửi cho đồng
 nghiệp là xem được.
 
-### 3. Mỗi lần sửa gì thêm
+### 3. Mỗi lần thay ảnh hay sửa nội dung
 
-Sửa ở máy (qua `/admin` hoặc sửa code), rồi:
+Đây là bước **hay bị quên nhất**. Sửa trong trang admin ở máy thì file trên máy
+đã đổi, nhưng bản trên mạng vẫn là bản cũ cho tới khi bạn đẩy lên.
+
+Sửa xong hết, chạy một lệnh này ở Terminal:
 
 ```bash
-git add -A
-git commit -m "Cập nhật ảnh và menu"
-git push
+npm run luu
 ```
 
-Vercel tự dựng lại, khoảng 2 phút sau bản trên mạng cập nhật theo.
+Lệnh này gói mọi thay đổi lại rồi đẩy lên GitHub, Vercel tự dựng lại website.
+Khoảng 2 phút sau là bản trên mạng cập nhật theo. Nó cũng liệt kê ra những file
+nào đã đổi để bạn xem lại trước khi đẩy.
+
+## Ảnh tự động được nén
+
+Ảnh tải lên qua trang admin được tự thu nhỏ về tối đa 2000px và nén lại thành
+định dạng WebP. Ảnh chụp điện thoại 2MB xuống còn khoảng 280KB — nhẹ hơn 7 lần
+mà mắt thường gần như không thấy khác.
+
+Việc này quan trọng vì hai lý do: khách vào web bằng 4G không phải chờ lâu, và
+kho mã nguồn không phình lên (ảnh đã đẩy lên rồi thì gỡ ra rất khó).
+
+Logo dạng SVG và ảnh động GIF thì giữ nguyên, không nén.
+
+Muốn ảnh nét hơn: sửa `CANH_DAI_TOI_DA` và `DO_NEN` ở đầu file
+`app/api/upload/route.ts`.
 
 ## Muốn form đặt bàn chạy được trên bản đã đưa lên
 
