@@ -13,14 +13,26 @@ Cách làm đúng: **sửa xong hết ở máy → mới đưa lên.**
 | | Trên máy bạn | Trên Vercel |
 |---|---|---|
 | Toàn bộ trang công khai, ảnh, menu | ✅ | ✅ |
-| Xem trang admin | ✅ | ✅ (chỉ xem) |
+| Vào trang admin | ✅ | ❌ đã tắt hẳn |
 | Sửa và bấm Lưu trong admin | ✅ | ❌ |
 | Tải ảnh mới lên qua admin | ✅ | ❌ |
 | Khách đặt bàn | ✅ lưu vào admin | ⚠️ chỉ chạy nếu đã khai báo email |
 
-Máy chủ Vercel không cho ghi file, đó là lý do. Vào `/admin` trên bản đã đưa lên
-sẽ thấy một bảng vàng nhắc điều này, và bấm Lưu sẽ báo rõ chứ không lỗi trắng
-màn hình.
+Máy chủ Vercel không cho ghi file, đó là lý do.
+
+## Trang admin đã tắt trên bản đưa lên mạng
+
+Vào `launuongmr69.vercel.app/admin` sẽ ra trang **"Không tìm thấy trang"** y hệt
+như gõ sai địa chỉ. Không lộ ra là website có trang quản trị, nên không ai ngồi
+dò mật khẩu được.
+
+Lý do tắt: trên Vercel admin có vào được cũng chẳng lưu được gì, mà để đó thì
+người lạ vẫn dò được mật khẩu và đọc được tên, số điện thoại khách đặt bàn.
+
+**Trên máy của bạn thì admin vẫn dùng bình thường**, không ảnh hưởng gì.
+
+Muốn bật tạm để khoe giao diện cho ai xem: vào Vercel → Settings → Environment
+Variables, thêm `BAT_ADMIN` = `1`, rồi Redeploy. Xem xong nhớ xoá biến đó đi.
 
 ## Các bước đưa lên (lần đầu, khoảng 10 phút)
 

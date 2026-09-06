@@ -84,6 +84,14 @@ lại. Tất cả tô bằng `currentColor`. Dùng ở FloatingContact, Footer, 
 hệ; mỗi nơi đều lọc bỏ kênh chưa khai báo link. Màu nền chuẩn: Zalo `#0068FF`,
 Messenger `#0084FF`, TikTok đen, Facebook `#0866FF`.
 
+## Trang quản trị trên Vercel
+Đã tắt hẳn bằng `proxy.ts` — `/admin/*` và `/api/upload` bị rewrite sang đường
+dẫn không tồn tại nên trả 404 thật, không lộ dấu vết. Điều khiển bằng `AN_ADMIN`
+trong `lib/env.ts` (bật lại bằng biến `BAT_ADMIN=1`). Trên máy không ảnh hưởng.
+
+Nút "Đưa lên mạng" (`NutDeploy.tsx`) chạy git add/commit/push, chỉ hiện khi
+`!CHI_XEM`. Là nút TẠM — chuyển sang Supabase rồi thì xoá.
+
 ## Việc còn phải làm trước khi lên tên miền thật
 `lib/store.ts` và `app/api/upload/route.ts` hiện ghi xuống ổ đĩa — Vercel không
 cho phép. Phải đổi sang Supabase/Neon (dữ liệu) và Vercel Blob/Supabase Storage
