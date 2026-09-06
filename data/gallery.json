@@ -1,11 +1,72 @@
 [
-  { "id": "g1", "image": "/uploads/gal-1.jpg", "caption": { "vi": "Khu bàn gỗ tầng trệt", "en": "Ground-floor wooden tables" }, "album": "khong-gian", "order": 1 },
-  { "id": "g2", "image": "/uploads/gal-2.jpg", "caption": { "vi": "Bàn nướng than hồng", "en": "Charcoal grill table" }, "album": "khong-gian", "order": 2 },
-  { "id": "g3", "image": "/uploads/gal-3.jpg", "caption": { "vi": "Góc sân ngoài trời", "en": "Outdoor courtyard" }, "album": "khong-gian", "order": 3 },
-  { "id": "g4", "image": "/uploads/gal-4.jpg", "caption": { "vi": "Phòng riêng cho nhóm đông", "en": "Private room for groups" }, "album": "khong-gian", "order": 4 },
-  { "id": "g5", "image": "/uploads/gal-5.jpg", "caption": { "vi": "Lẩu song vị nghi ngút", "en": "Twin-broth hotpot" }, "album": "mon-an", "order": 5 },
-  { "id": "g6", "image": "/uploads/gal-6.jpg", "caption": { "vi": "Ba chỉ bò trên vỉ", "en": "Beef on the grill" }, "album": "mon-an", "order": 6 },
-  { "id": "g7", "image": "/uploads/gal-7.jpg", "caption": { "vi": "Sườn nướng mật ong", "en": "Honey-glazed ribs" }, "album": "mon-an", "order": 7 },
-  { "id": "g8", "image": "/uploads/gal-8.jpg", "caption": { "vi": "Tiệc sinh nhật tại quán", "en": "A birthday at Mr.69" }, "album": "su-kien", "order": 8 },
-  { "id": "g9", "image": "/uploads/gal-9.jpg", "caption": { "vi": "Đêm nhạc acoustic cuối tuần", "en": "Weekend acoustic night" }, "album": "su-kien", "order": 9 }
+  {
+    "id": "g1",
+    "image": "/uploads/691116597-122176959938904971-2017353514211345377-n-f68d1d82.webp",
+    "caption": {
+      "vi": "Khu vực trong nhà",
+      "en": "Ground-floor wooden tables"
+    },
+    "album": "khong-gian",
+    "order": 1
+  },
+  {
+    "id": "g2",
+    "image": "/uploads/605255108-122157077474904971-2653748285871564451-n-3e84d736.webp",
+    "caption": {
+      "vi": "Combo 4 người",
+      "en": "Charcoal grill table"
+    },
+    "album": "khong-gian",
+    "order": 2
+  },
+  {
+    "id": "g3",
+    "image": "/uploads/665608979-122172057392904971-5621400723098717934-n-30167ceb.webp",
+    "caption": {
+      "vi": "Góc sân ngoài trời",
+      "en": "Outdoor courtyard"
+    },
+    "album": "khong-gian",
+    "order": 3
+  },
+  {
+    "id": "g5",
+    "image": "/uploads/bia-1b32bc1b.webp",
+    "caption": {
+      "vi": "Lẩu Tomyum siêu ngon",
+      "en": "Twin-broth hotpot"
+    },
+    "album": "mon-an",
+    "order": 5
+  },
+  {
+    "id": "g6",
+    "image": "/uploads/bia-1-cb36280d.webp",
+    "caption": {
+      "vi": "Lẩu cá thơm ngon",
+      "en": "Beef on the grill"
+    },
+    "album": "mon-an",
+    "order": 6
+  },
+  {
+    "id": "g7",
+    "image": "/uploads/672686458-122174183522904971-6977820920148853767-n-8ee3d6dc.webp",
+    "caption": {
+      "vi": "Ăn vặt phong phú",
+      "en": "Honey-glazed ribs"
+    },
+    "album": "mon-an",
+    "order": 7
+  },
+  {
+    "id": "g8",
+    "image": "/uploads/733955221-122184138008904971-4329104997092129050-n-093f41ce.webp",
+    "caption": {
+      "vi": "Tiệc sinh nhật tại quán",
+      "en": "A birthday at Mr.69"
+    },
+    "album": "su-kien",
+    "order": 8
+  }
 ]

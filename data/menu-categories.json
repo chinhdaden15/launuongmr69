@@ -1,5 +1,19 @@
 [
   {
+    "name": {
+      "vi": "Combo",
+      "en": "Combo"
+    },
+    "slug": "com-bo",
+    "desc": {
+      "vi": "",
+      "en": ""
+    },
+    "image": "/uploads/1-caa186f6.webp",
+    "order": 1,
+    "id": "menu-categories-mtpjulq7"
+  },
+  {
     "id": "cat-khai-vi",
     "slug": "khai-vi",
     "name": {
@@ -10,8 +24,8 @@
       "vi": "Món mở đầu bữa ăn — nhẹ nhàng, kích thích vị giác trước khi vào lẩu và nướng.",
       "en": "Light plates to open the meal and wake up the appetite."
     },
-    "image": "/uploads/cat-combo.jpg",
-    "order": 1
+    "image": "/uploads/672686458-122174183522904971-6977820920148853767-n-f65e659a.webp",
+    "order": 2
   },
   {
     "id": "cat-lau",
@@ -24,8 +38,8 @@
       "vi": "Nước dùng ninh từ xương mỗi sáng, nóng ấm và đậm vị — thứ không thể thiếu trong mỗi buổi quây quần.",
       "en": "Broth simmered from bone each morning — warm, rich, and essential to every gathering."
     },
-    "image": "/uploads/cat-lau.jpg",
-    "order": 2
+    "image": "/uploads/721802112-122181371306904971-8359941979948071874-n-04e49e23.webp",
+    "order": 3
   },
   {
     "id": "cat-nuong",
@@ -39,7 +53,7 @@
       "en": "Turn each cut over the coals yourself and eat it at its hottest, most fragrant moment."
     },
     "image": "/uploads/cat-nuong.jpg",
-    "order": 3
+    "order": 4
   },
   {
     "id": "cat-nhau",
@@ -52,8 +66,8 @@
       "vi": "Món gọi thêm cho vui miệng. Vị ngon nhân đôi khi dùng kèm bia lạnh.",
       "en": "Something extra to pick at. Twice as good with a cold beer."
     },
-    "image": "/uploads/cat-nhau.jpg",
-    "order": 4
+    "image": "/uploads/722769538-122181927938904971-3493015816716152080-n-345b8b8b.webp",
+    "order": 5
   },
   {
     "id": "cat-them",
@@ -66,8 +80,8 @@
       "vi": "Rau, nấm, mì và những phần gọi thêm để nồi lẩu lúc nào cũng đầy.",
       "en": "Greens, mushrooms, noodles — everything that keeps the pot full."
     },
-    "image": "/uploads/cat-them.jpg",
-    "order": 5
+    "image": "/uploads/724195337-122181927764904971-4180168031743078183-n-27132e1c.webp",
+    "order": 6
   },
   {
     "id": "cat-uong",
@@ -80,7 +94,7 @@
       "vi": "Bia lạnh, trà trái cây thanh mát và nước ép giải ngấy giữa bữa nướng.",
       "en": "Cold beer, fruit teas and juices to cut through the richness."
     },
-    "image": "/uploads/cat-uong.jpg",
-    "order": 6
+    "image": "/uploads/689212762-122176959770904971-7725157088053907490-n-6b8197eb.webp",
+    "order": 7
   }
 ]

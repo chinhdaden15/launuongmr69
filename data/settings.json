@@ -6,23 +6,23 @@
     "en": "Hotpot & Grill"
   },
   "hotline": "0325200052",
-  "email": "lienhe@launuongmr69.com",
+  "email": "mr.69cskh@gmail.com",
   "zalo": "0325200052",
-  "facebook": "https://facebook.com/launuongmr69",
-  "messenger": "https://m.me/launuongmr69",
-  "tiktok": "https://www.tiktok.com/@launuongmr69",
-  "notifyEmail": "lienhe@launuongmr69.com",
+  "facebook": "https://www.facebook.com/Mr.69chuyenlauca69k",
+  "messenger": "https://www.facebook.com/Mr.69chuyenlauca69k",
+  "tiktok": "https://www.tiktok.com/@mr69_lauca69k",
+  "notifyEmail": "mr.69cskh@gmail.com",
   "hero": [
     {
       "id": "hero-1",
-      "image": "/uploads/hero-1.jpg",
+      "image": "/uploads/bia-1-fd5c6e12.webp",
       "eyebrow": {
         "vi": "Lẩu & Nướng Mr.69",
         "en": "Mr.69 Hotpot & Grill"
       },
       "title": {
-        "vi": "Than hồng đỏ lửa,\nlẩu sôi nghi ngút",
-        "en": "Glowing charcoal,\nbubbling hotpot"
+        "vi": "Lẩu đậm đà,\nnướng thả ga",
+        "en": "Flavorful Hotpot,\nGrilling Galore!"
       },
       "subtitle": {
         "vi": "Nơi bạn bè quây quần bên vỉ nướng và nồi lẩu, giữa không gian mộc mạc thân quen.",
@@ -37,51 +37,51 @@
     },
     {
       "id": "hero-2",
-      "image": "/uploads/hero-2.jpg",
+      "image": "/uploads/bia-0bc97b59.webp",
       "eyebrow": {
         "vi": "Ưu đãi đang chạy",
         "en": "Running now"
       },
       "title": {
-        "vi": "Set lẩu song vị\nchỉ 359.000đ",
-        "en": "Twin-broth hotpot set\nfrom 359,000đ"
+        "vi": "Combo Lẩu & Nướng\nchỉ 359.000đ",
+        "en": "Hotpot & Grill Combo\nfrom 359,000đ"
       },
       "subtitle": {
         "vi": "Áp dụng cho nhóm 2–4 người, từ thứ Hai đến thứ Năm hằng tuần.",
         "en": "For groups of 2–4, Monday through Thursday."
       },
       "ctaLabel": {
-        "vi": "Đặt bàn ngay",
+        "vi": "Xem Combo",
         "en": "Book a table"
       },
-      "ctaHref": "/dat-ban",
+      "ctaHref": "/uu-dai",
       "order": 2
     },
     {
       "id": "hero-3",
-      "image": "/uploads/hero-3.jpg",
+      "image": "/uploads/bia-2-96e7cee2.webp",
       "eyebrow": {
-        "vi": "Không gian",
-        "en": "Our space"
+        "vi": "Chương trình áp dụng Thứ 3 hàng tuần",
+        "en": "Hotpot from 49K"
       },
       "title": {
-        "vi": "Mộc mạc,\nấm cúng, thân quen",
+        "vi": "Đồng giá lẩu 49K",
         "en": "Rustic,\nwarm, familiar"
       },
       "subtitle": {
-        "vi": "Bàn ghế gỗ, đèn vàng và mùi than thơm — đúng chất quán nướng Việt.",
+        "vi": "Áp dụng cho hóa đơn có Lẩu cá (cá diêu hồng, cá hú, đầu cá hồi)",
         "en": "Wooden tables, warm lights and the scent of charcoal."
       },
       "ctaLabel": {
-        "vi": "Xem không gian",
+        "vi": "Xem ưu đãi",
         "en": "See the space"
       },
-      "ctaHref": "/khong-gian",
+      "ctaHref": "/uu-dai",
       "order": 3
     }
   ],
   "about": {
-    "image": "/uploads/about.jpg",
+    "image": "/uploads/khong-gian-f0963214.webp",
     "title": {
       "vi": "Trải nghiệm lẩu nướng đúng chất Việt",
       "en": "A truly Vietnamese grill experience"
