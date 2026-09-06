@@ -11,8 +11,19 @@ import { cookies } from "next/headers";
 const COOKIE = "mr69_admin";
 const MAX_AGE = 60 * 60 * 12; // 12 tiếng
 
+/**
+ * Chuỗi bí mật để ký phiên đăng nhập.
+ *
+ * KHÔNG được đặt giá trị dự phòng cố định ở đây. Mã nguồn nằm trên GitHub, ai
+ * đọc được cũng sẽ biết chuỗi đó và tự làm ra được một phiên đăng nhập giả mà
+ * không cần mật khẩu. Chưa khai báo thì dùng một chuỗi ngẫu nhiên sinh lúc
+ * chạy — phiên đăng nhập sẽ mất mỗi lần khởi động lại, đủ để bạn nhận ra là
+ * thiếu cấu hình.
+ */
+const SECRET_TAM = crypto.randomBytes(32).toString("hex");
+
 function secret() {
-  return process.env.AUTH_SECRET || "mr69-doi-secret-nay-truoc-khi-len-that";
+  return process.env.AUTH_SECRET || SECRET_TAM;
 }
 
 function sign(payload: string) {
@@ -37,7 +48,20 @@ export function verifyToken(token: string | undefined): boolean {
 }
 
 export function checkPassword(input: string): boolean {
-  const expected = process.env.ADMIN_PASSWORD || "mr69";
+  const expected = process.env.ADMIN_PASSWORD;
+
+  // Chưa khai báo mật khẩu thì KHÔNG cho ai vào cả.
+  // Trước đây chỗ này để tạm mật khẩu "mr69" cho tiện, nhưng mã nguồn nằm
+  // trên GitHub nên ai cũng đọc được — thà khoá hẳn còn hơn để cửa mở.
+  if (!expected) {
+    console.error(
+      "Chưa khai báo ADMIN_PASSWORD nên trang quản trị đang bị khoá. " +
+        "Ở máy: thêm vào file .env.local. Trên Vercel: vào Settings → " +
+        "Environment Variables.",
+    );
+    return false;
+  }
+
   const a = Buffer.from(input);
   const b = Buffer.from(expected);
   return a.length === b.length && crypto.timingSafeEqual(a, b);

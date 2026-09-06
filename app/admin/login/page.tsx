@@ -47,8 +47,10 @@ export default function LoginPage() {
         </button>
 
         <p className="mt-5 text-center text-[11px] leading-relaxed text-stone-500">
-          Quên mật khẩu? Mở file <code className="rounded bg-stone-100 px-1">.env.local</code>{" "}
-          trong thư mục dự án, dòng <code className="rounded bg-stone-100 px-1">ADMIN_PASSWORD</code>.
+          Quên mật khẩu? Ở máy thì mở file{" "}
+          <code className="rounded bg-stone-100 px-1">.env.local</code>, dòng{" "}
+          <code className="rounded bg-stone-100 px-1">ADMIN_PASSWORD</code>. Trên
+          bản đã đưa lên mạng thì vào Vercel → Settings → Environment Variables.
         </p>
       </form>
     </div>
