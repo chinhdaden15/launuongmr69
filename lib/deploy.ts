@@ -19,8 +19,10 @@ export type KetQuaDeploy = {
   ok: boolean;
   /** Câu thông báo hiển thị cho chủ quán đọc. */
   loi?: string;
-  /** Số file đã đưa lên trong lần này. */
+  /** Số file vừa được lưu lại trong lần bấm này. */
   soFile?: number;
+  /** Số mốc lưu đã đẩy lên (gồm cả mốc cũ còn sót từ lần đẩy hỏng trước). */
+  soMoc?: number;
 };
 
 async function git(...args: string[]) {
@@ -71,8 +73,10 @@ export async function dayLenMang(): Promise<KetQuaDeploy> {
     chuaDay = "co"; // chưa từng đẩy lần nào
   }
 
-  if (!soFile && !chuaDay) {
-    return { ok: true, soFile: 0 };
+  const soMoc = chuaDay ? chuaDay.split("\n").filter(Boolean).length : 0;
+
+  if (!soFile && !soMoc) {
+    return { ok: true, soFile: 0, soMoc: 0 };
   }
 
   try {
@@ -88,5 +92,5 @@ export async function dayLenMang(): Promise<KetQuaDeploy> {
     };
   }
 
-  return { ok: true, soFile };
+  return { ok: true, soFile, soMoc };
 }

@@ -25,12 +25,19 @@ export function NutDeploy() {
         setBao({ ok: false, chu: kq.loi ?? "Không đưa lên được." });
         return;
       }
+      // Ba trường hợp khác nhau, đừng gộp làm một kẻo báo sai:
+      //  - không có gì để làm
+      //  - vừa lưu thay đổi mới rồi đẩy
+      //  - không có thay đổi mới nhưng còn mốc cũ chưa đẩy (lần trước hỏng mạng)
+      const { soFile = 0, soMoc = 0 } = kq;
       setBao({
         ok: true,
         chu:
-          kq.soFile === 0
+          soFile === 0 && soMoc === 0
             ? "Không có gì mới — bản trên mạng đang khớp với máy bạn."
-            : `Đã đưa ${kq.soFile} thay đổi lên. Khoảng 2 phút nữa website cập nhật.`,
+            : soFile > 0
+              ? `Đã đưa ${soFile} thay đổi lên. Khoảng 2 phút nữa website cập nhật.`
+              : `Đã đẩy nốt ${soMoc} lần sửa còn sót từ trước. Khoảng 2 phút nữa website cập nhật.`,
       });
     });
   }
